@@ -119,6 +119,50 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &147392801
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 147392803}
+  - component: {fileID: 147392802}
+  m_Layer: 0
+  m_Name: MenuManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &147392802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147392801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a0c7c241a5b4b247b76da8c5f6a69aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MenuBtn
+--- !u!4 &147392803
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147392801}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 581.66705, y: 219.60466, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &177572381
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -137,7 +181,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3435845368375563166, guid: 7836ce171307de74696afcbedc42deab, type: 3}
       propertyPath: m_Name
-      value: Button 2 (Red) (1)
+      value: SettingsButton
       objectReference: {fileID: 0}
     - target: {fileID: 7663539416683675421, guid: 7836ce171307de74696afcbedc42deab, type: 3}
       propertyPath: m_Pivot.x
@@ -448,8 +492,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -288, y: -4.8456}
-  m_SizeDelta: {x: 573.5963, y: 508.976}
+  m_AnchoredPosition: {x: -287.4, y: -4.8456}
+  m_SizeDelta: {x: 574.8, y: 508.976}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &490223169
 MonoBehaviour:
@@ -583,7 +627,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3435845368375563166, guid: 7836ce171307de74696afcbedc42deab, type: 3}
       propertyPath: m_Name
-      value: Button 2 (Red) (2)
+      value: QuitButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 6707077395246212963, guid: 7836ce171307de74696afcbedc42deab, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6707077395246212963, guid: 7836ce171307de74696afcbedc42deab, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6707077395246212963, guid: 7836ce171307de74696afcbedc42deab, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 147392802}
+    - target: {fileID: 6707077395246212963, guid: 7836ce171307de74696afcbedc42deab, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6707077395246212963, guid: 7836ce171307de74696afcbedc42deab, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ExitMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 6707077395246212963, guid: 7836ce171307de74696afcbedc42deab, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MenuBtn, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6707077395246212963, guid: 7836ce171307de74696afcbedc42deab, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7663539416683675421, guid: 7836ce171307de74696afcbedc42deab, type: 3}
       propertyPath: m_Pivot.x
@@ -693,7 +765,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3435845368375563166, guid: 7836ce171307de74696afcbedc42deab, type: 3}
       propertyPath: m_Name
-      value: Button 2 (Red)
+      value: PlayButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 6707077395246212963, guid: 7836ce171307de74696afcbedc42deab, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6707077395246212963, guid: 7836ce171307de74696afcbedc42deab, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6707077395246212963, guid: 7836ce171307de74696afcbedc42deab, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 147392802}
+    - target: {fileID: 6707077395246212963, guid: 7836ce171307de74696afcbedc42deab, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6707077395246212963, guid: 7836ce171307de74696afcbedc42deab, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GotoScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 6707077395246212963, guid: 7836ce171307de74696afcbedc42deab, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MenuBtn, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6707077395246212963, guid: 7836ce171307de74696afcbedc42deab, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7663539416683675421, guid: 7836ce171307de74696afcbedc42deab, type: 3}
       propertyPath: m_Pivot.x
@@ -1021,3 +1121,4 @@ SceneRoots:
   - {fileID: 1538780815}
   - {fileID: 470613385}
   - {fileID: 288412927}
+  - {fileID: 147392803}
