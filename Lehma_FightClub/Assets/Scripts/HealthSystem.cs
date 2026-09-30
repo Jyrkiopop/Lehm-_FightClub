@@ -12,8 +12,8 @@ public class PlayerHealth : MonoBehaviour
     [Header("Hyökkäysasetukset (Voit muokata näitä Inspectorissa!)")]
     public Transform attackPoint;
     public float attackRange = 1.0f;
-    public float attackDamage = 20f; // <-- TÄSTÄ voit säätää, kuinka paljon vahinkoa lyönti tekee
-    public float attackAnimationDuration = 0.2f; // Kuinka kauan lyönti kestää
+    public float attackDamage = 20f; 
+    public float attackAnimationDuration = 0.2f; 
     public LayerMask playerLayer;
 
     [Header("Animaatio (Valinnainen)")]
@@ -27,11 +27,13 @@ public class PlayerHealth : MonoBehaviour
 
     void Update()
     {
-        // Pelaaja 1 käyttää E-näppäintä, Pelaaja 2 käyttää Right Control -näppäintä
+        // Pelaaja 1 Lyö E näppäimellä
         if (playerID == 1 && Input.GetKeyDown(KeyCode.E))
         {
             Attack();
         }
+
+        // Pelaaja 2 Lyö oikea Ctrl
         else if (playerID == 2 && Input.GetKeyDown(KeyCode.RightControl))
         {
             Attack();
@@ -40,7 +42,7 @@ public class PlayerHealth : MonoBehaviour
 
     void Attack()
     {
-        // Animaatio
+        
         if (animator != null)
         {
             animator.SetBool("isAttacking", true);
@@ -49,18 +51,18 @@ public class PlayerHealth : MonoBehaviour
 
         if (attackPoint == null) return;
 
-        // Etsitään hyökkäysalueelta toinen pelaaja
+        
         Collider2D[] hitPlayers = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, playerLayer);
 
         foreach (Collider2D hit in hitPlayers)
         {
-            // Varmistetaan, ettei lyö itseään
+            
             if (hit.gameObject != gameObject)
             {
                 PlayerHealth enemyHealth = hit.GetComponent<PlayerHealth>();
                 if (enemyHealth != null)
                 {
-                    // Tehdään vahinkoa tällä inspectorissa säädetyllä damagella
+                    
                     enemyHealth.TakeDamage(attackDamage);
                 }
             }
@@ -100,7 +102,7 @@ public class PlayerHealth : MonoBehaviour
         Debug.Log("Pelaaja " + playerID + " kuoli!");
     }
 
-    // Piirtää ympyrän Scene-näkymään, jotta näet lyöntialueen
+    // Tekee ympyrän sceneen josta näkee lyönnin alueen
     private void OnDrawGizmosSelected()
     {
         if (attackPoint != null)
