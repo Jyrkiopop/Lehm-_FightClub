@@ -12,9 +12,9 @@ public class PlayerHealth : MonoBehaviour
     [Header("Hyökkäysasetukset (Voit muokata näitä Inspectorissa!)")]
     public Transform attackPoint;
     public float attackRange = 1.0f;
-    public float attackDamage = 20f; 
-    public float attackAnimationDuration = 0.2f; 
-    public LayerMask playerLayer;
+    public float attackDamage = 20f;
+    public float attackAnimationDuration = 0.2f;
+    // Poistettu LayerMask, koska sitä ei enää tarvita!
 
     [Header("Animaatio (Valinnainen)")]
     public Animator animator;
@@ -42,7 +42,6 @@ public class PlayerHealth : MonoBehaviour
 
     void Attack()
     {
-        
         if (animator != null)
         {
             animator.SetBool("isAttacking", true);
@@ -51,18 +50,19 @@ public class PlayerHealth : MonoBehaviour
 
         if (attackPoint == null) return;
 
-        
-        Collider2D[] hitPlayers = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, playerLayer);
+        // Haetaan kaikki colliderit annetulta alueelta ilman layer-suodatusta
+        Collider2D[] hitPlayers = Physics2D.OverlapCircleAll(attackPoint.position, attackRange);
 
         foreach (Collider2D hit in hitPlayers)
         {
-            
+            // Varmistetaan, että emme lyö itseämme
             if (hit.gameObject != gameObject)
             {
                 PlayerHealth enemyHealth = hit.GetComponent<PlayerHealth>();
+
+                // Jos osutulla objektilla on PlayerHealth-skripti, se ottaa vahinkoa
                 if (enemyHealth != null)
                 {
-                    
                     enemyHealth.TakeDamage(attackDamage);
                 }
             }
@@ -102,7 +102,6 @@ public class PlayerHealth : MonoBehaviour
         Debug.Log("Pelaaja " + playerID + " kuoli!");
     }
 
-    // Tekee ympyrän sceneen josta näkee lyönnin alueen
     private void OnDrawGizmosSelected()
     {
         if (attackPoint != null)
