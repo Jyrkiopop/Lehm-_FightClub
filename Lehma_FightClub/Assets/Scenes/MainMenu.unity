@@ -173,7 +173,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3141163532043081933, guid: 7836ce171307de74696afcbedc42deab, type: 3}
       propertyPath: m_text
-      value: Asetukset
+      value: Controls
       objectReference: {fileID: 0}
     - target: {fileID: 3141163532043081933, guid: 7836ce171307de74696afcbedc42deab, type: 3}
       propertyPath: m_ActiveFontFeatures.Array.size
@@ -182,6 +182,34 @@ PrefabInstance:
     - target: {fileID: 3435845368375563166, guid: 7836ce171307de74696afcbedc42deab, type: 3}
       propertyPath: m_Name
       value: SettingsButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 6707077395246212963, guid: 7836ce171307de74696afcbedc42deab, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6707077395246212963, guid: 7836ce171307de74696afcbedc42deab, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6707077395246212963, guid: 7836ce171307de74696afcbedc42deab, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 147392802}
+    - target: {fileID: 6707077395246212963, guid: 7836ce171307de74696afcbedc42deab, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6707077395246212963, guid: 7836ce171307de74696afcbedc42deab, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GotoControls
+      objectReference: {fileID: 0}
+    - target: {fileID: 6707077395246212963, guid: 7836ce171307de74696afcbedc42deab, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MenuBtn, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6707077395246212963, guid: 7836ce171307de74696afcbedc42deab, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7663539416683675421, guid: 7836ce171307de74696afcbedc42deab, type: 3}
       propertyPath: m_Pivot.x
@@ -479,9 +507,9 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 490223167}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0.005236146, y: -0, z: -0, w: 0.9999863}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.26, y: 1.47, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1470052340}
@@ -489,10 +517,10 @@ RectTransform:
   - {fileID: 1000291708}
   - {fileID: 1704385049}
   m_Father: {fileID: 512619515}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0.6, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -287.4, y: -4.8456}
+  m_AnchoredPosition: {x: -454, y: -4.845581}
   m_SizeDelta: {x: 574.8, y: 508.976}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &490223169
@@ -584,7 +612,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.21509439, g: 0.21509439, b: 0.21509439, a: 1}
+  m_Color: {r: 0.5773585, g: 0.5773585, b: 0.5773585, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

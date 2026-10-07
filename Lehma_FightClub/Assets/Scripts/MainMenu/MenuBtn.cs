@@ -8,6 +8,11 @@ public class MenuBtn : MonoBehaviour
         SceneManager.LoadScene("Lenni");
     }
 
+    public void GotoControls()
+    {
+        SceneManager.LoadScene("Controls");
+    }
+
     public void ExitMenu()
     {
         Application.Quit();
