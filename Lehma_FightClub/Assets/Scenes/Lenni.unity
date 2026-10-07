@@ -226,8 +226,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1622883324}
-  - {fileID: 787078764}
   - {fileID: 192806395}
   - {fileID: 941752311}
   - {fileID: 1795303474}
@@ -1035,7 +1033,7 @@ GameObject:
   m_Component:
   - component: {fileID: 787078764}
   - component: {fileID: 787078763}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Bench2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1097,11 +1095,11 @@ Transform:
   m_GameObject: {fileID: 787078762}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.0798798, y: -2.73409, z: 0}
+  m_LocalPosition: {x: 6.82639, y: 2.1899998, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 268018616}
+  m_Father: {fileID: 1159380245}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &841760645
 PrefabInstance:
@@ -1590,7 +1588,9 @@ Transform:
   m_LocalPosition: {x: 0.25349, y: -4.92409, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1622883324}
+  - {fileID: 787078764}
   m_Father: {fileID: 268018616}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1219218856
@@ -2636,10 +2636,15 @@ MonoBehaviour:
   attackRange: 1
   attackDamage: 5
   attackAnimationDuration: 0.2
-  animator: {fileID: 0}
+  animator: {fileID: 1399488055}
 --- !u!4 &1399488053 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6144848197659560896, guid: b1611cd253cbb524cbfb6ab6dc2dc87e, type: 3}
+  m_PrefabInstance: {fileID: 1399488042}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1399488055 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1076013681965976514, guid: b1611cd253cbb524cbfb6ab6dc2dc87e, type: 3}
   m_PrefabInstance: {fileID: 1399488042}
   m_PrefabAsset: {fileID: 0}
 --- !u!224 &1435409689 stripped
@@ -2657,7 +2662,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1622883324}
   - component: {fileID: 1622883323}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Bench1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2719,11 +2724,11 @@ Transform:
   m_GameObject: {fileID: 1622883322}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.4901204, y: -2.73409, z: 0}
+  m_LocalPosition: {x: -7.7436104, y: 2.1899998, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 268018616}
+  m_Father: {fileID: 1159380245}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1660142510
 GameObject:
@@ -3374,6 +3379,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0.13485871
       objectReference: {fileID: 0}
+    - target: {fileID: 6975720394448396962, guid: ae146497589310a4cbee788292c9ee53, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 7c9ed41428a700842b432c573d11a3b4, type: 2}
     - target: {fileID: 6975720394659556190, guid: ae146497589310a4cbee788292c9ee53, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -3573,10 +3582,15 @@ MonoBehaviour:
   attackRange: 1
   attackDamage: 5
   attackAnimationDuration: 0.2
-  animator: {fileID: 0}
+  animator: {fileID: 2057529919}
 --- !u!4 &2057529917 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5499048073028903002, guid: ae146497589310a4cbee788292c9ee53, type: 3}
+  m_PrefabInstance: {fileID: 2057529906}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &2057529919 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6975720394448396962, guid: ae146497589310a4cbee788292c9ee53, type: 3}
   m_PrefabInstance: {fileID: 2057529906}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2087434133
