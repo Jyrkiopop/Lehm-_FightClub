@@ -5,7 +5,7 @@ public class MenuBtn : MonoBehaviour
 {
     public void GotoScene()
     {
-        SceneManager.LoadScene("Ilo");
+        SceneManager.LoadScene("Lenni");
     }
 
     public void ExitMenu()

@@ -11,9 +11,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 570659135d6fcad47b1beca00596e0a7
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Ilo.unity
     guid: 2e19601e4f7341d48b1a3d697556d152
+  - enabled: 1
+    path: Assets/Scenes/Lenni.unity
+    guid: 4c6e8959c5ee8f94e9bea5c870ef8d53
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
