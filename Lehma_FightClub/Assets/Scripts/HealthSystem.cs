@@ -9,14 +9,17 @@ public class PlayerHealth : MonoBehaviour
     private float currentHealth;
     public Image healthBarImage;
 
-    [Header("Hyökkäysasetukset (Voit muokata näitä Inspectorissa!)")]
+    [Header("Hyökkäysasetukset")]
     public Transform attackPoint;
     public float attackRange = 1.0f;
     public float attackDamage = 20f;
     public float attackAnimationDuration = 0.2f;
-    // Poistettu LayerMask, koska sitä ei enää tarvita!
 
-    [Header("Animaatio (Valinnainen)")]
+    [Header("Ääni")]
+    public AudioSource audioSource;
+    public AudioClip attackSound;
+
+    [Header("Animaatio")]
     public Animator animator;
 
     void Start()
@@ -46,6 +49,11 @@ public class PlayerHealth : MonoBehaviour
         {
             animator.SetBool("isAttacking", true);
             Invoke("ResetAnimation", attackAnimationDuration);
+        }
+
+        if (audioSource != null && attackSound != null)
+        {
+            audioSource.PlayOneShot(attackSound);
         }
 
         if (attackPoint == null) return;
