@@ -108,6 +108,22 @@ public class PlayerHealth : MonoBehaviour
     void Die()
     {
         Debug.Log("Pelaaja " + playerID + " kuoli!");
+
+        // Lasketaan kuka voitti: jos kuollut on Pelaaja 1, voittaja on 2. Muuten voittaja on 1.
+        int winningPlayer = (playerID == 1) ? 2 : 1;
+
+        // Kutsutaan WinManageria jos se löytyy kentältä
+        if (WinManager.Instance != null)
+        {
+            WinManager.Instance.TriggerWin(winningPlayer);
+        }
+        else
+        {
+            Debug.LogWarning("Kentältä ei löytynyt WinManager-skriptiä!");
+        }
+
+        // Piilotetaan tai deaktioidaan kuollut pelaaja
+        gameObject.SetActive(false);
     }
 
     private void OnDrawGizmosSelected()

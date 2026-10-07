@@ -24,7 +24,6 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
-    
     public void Pause()
     {
         isPaused = true;
@@ -32,7 +31,6 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 0f;
     }
 
-    
     public void Resume()
     {
         isPaused = false;
@@ -40,7 +38,12 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
     }
 
-    
+    public void Restart()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
     public void GoToMenu()
     {
         Time.timeScale = 1f;
